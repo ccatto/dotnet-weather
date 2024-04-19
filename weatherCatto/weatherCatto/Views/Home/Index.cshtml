@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">S-One Weather App</h1>
+    <p>This S-One weather app allows us to enter a zip code and obtain the weather.</p>
+</div>
+<br />
+<hr /> 
+<br />
+<div class="row text-center">
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-8 lead mb-2">
+            <label for="usr">Chris Catto's weather checker for S-One - Enter your Zip Code</label>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-1">
+            <input type="text" class="form-control text-center mb-3" id="userZipCode" autofocus="autofocus"> 
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <label id="errorMessage" class="collapse mb-3 mt-0 text-danger"> Please enter a valid zip code of 5 digits </label>
+            <input type="button" class="btn btn-info" id="SearchZip" value="Check the weather!" />
+        </div>
+    </div>
+    <br />
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $("#SearchZip").click(function () {
+            const usersZipCode = $("#userZipCode").val();
+            var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(usersZipCode);
+            if (isValidZip === false) {
+                $('#errorMessage').show();
+            } else {
+                $('#errorMessage').hide();
+                 window.location = "@Url.Action("WeatherResults", "Home")" + "/" + usersZipCode;
+            }
+        });
+    </script>
+}

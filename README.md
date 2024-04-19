@@ -15,12 +15,12 @@ Using value submitted through the UI (button click), the following web services 
 #### Step 1: retrieve latitude/longitude based on the zip code provided:
 Google API (Geocoding API to obtain latitude/longitude)
 API Documentation: https://developers.google.com/maps/documentation/geocoding/start
-API key: AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM
+API key: 
 
 #### Step 2: retrieve current weather based on latitude\longitude from the previous call:
 Open Weather (Weather API)
 API Documentation: https://openweathermap.org/current
-API key: 800a3f8dc7a089347269a3957e059ee1
+API key: 
 
 ### Output:
 Result of the web service calls:

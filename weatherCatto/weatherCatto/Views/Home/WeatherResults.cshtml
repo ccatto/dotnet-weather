@@ -1,0 +1,90 @@
+﻿@model WeatherData
+
+@{
+    ViewData["Title"] = "S-One Chris Catto's Weather Results";
+}
+<h1>@ViewData["Title"]</h1>
+<p>The weather in your zip is code is as follow:</p>
+<br />
+<hr />
+<div class="text-light">
+    @try
+    {
+        <h2 class="text-center">@Model.Title's weather</h2>
+        string precipitationCategory = "";
+        switch (Model?.Weather?[0].Visibility?.ToString())
+        {
+            case "Rain": precipitationCategory = "Rainy 🌧"; break;
+            case "Clear": precipitationCategory = "Sunny! ☀"; break;
+            case "Clouds": precipitationCategory = "Cloudy ⛅"; break;
+        }
+        <div class="card text-center bg-dark text-white mb-4">
+            <div class="card-body">
+                <h1 class="card-title">@Convert.ToInt32(Model?.Main?.Temperature) °F</h1>
+                <p class="card-text"> @precipitationCategory</p>
+            </div>
+            <div class="card-footer text-muted">
+                Feels like @Convert.ToInt32(Model?.Main?.feels_like) °F
+            </div>
+        </div>
+        <div class="container border border-primary border-1 rounded col-6">
+            <div class="row border border-primary">
+                <div class="col-md border border-primary border-1 text-center">
+                    Humidity
+                </div>
+                <div class="col-md border border-primary border-1 text-center">
+                    Wind
+                </div>
+                <div class="col-md border border-primary border-1 text-center">
+                    High/Low
+                </div>
+            </div>
+            <div class="row border border-primary border-1">
+                <div class="col-md border border-primary text-center">
+                    @Model?.Main?.Humidity %
+                </div>
+                <div class="col-md border border-primary text-center">
+                    @Model?.Wind?.Speed mph
+                </div>
+                <div class="col-md border border-primary text-center">
+                    @Convert.ToInt32(Model?.Main?.temp_max) °F / @Convert.ToInt32(Model?.Main?.temp_min) °F
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row justify-content-center">
+            <a asp-action="" class="btn btn-sm btn-info col-2" autofocus="autofocus">Search Again!</a>
+        </div>
+        <br />
+        @switch (Model?.Weather?[0].Visibility?.ToString())
+        {
+            case "Clear":
+                <div class="row justify-content-center">
+                    <h1>Clear day</h1>
+                    <img src="~/Images/Clear.png" height="550" width="1120">
+                </div>
+                ; break;
+            case "Clouds":
+                <div class="row justify-content-center">
+                    <h1>Cloudy day</h1>
+                    <img src="~/Images/PartlyCloudy.png" height="550" width="1120">
+                </div>
+                ; break;
+            case "Rain":
+                <div class="row justify-content-center">
+                    <h1>Rainy day</h1>
+                    <img src="~/Images/Rain.png" height="550" width="1120">
+                </div>
+                ; break;
+        }
+        <hr class="mb-5"/>
+    }
+    catch
+    {
+        <h1>Your zip code is not found</h1>
+        <br />
+        <div class="row justify-content-center">
+            <a asp-action="" class="btn btn-sm btn-primary col-2">Search Again!</a>
+        </div>
+    }
+</div>

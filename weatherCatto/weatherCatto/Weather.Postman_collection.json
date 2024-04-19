@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "cdc06bbe-860c-4b11-9b5a-1ec85af84e86",
+		"name": "WeatherCatto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10578126"
+	},
+	"item": [
+		{
+			"name": "Get Google GeoCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?address=33433&sensor=true&key=%20AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "33433"
+						},
+						{
+							"key": "sensor",
+							"value": "true"
+						},
+						{
+							"key": "key",
+							"value": "%20AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "1600+Amphitheatre+Parkway,+Mountain+View,+CA"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.openweathermap.org/data/2.5/weather?q=+boca raton&units=metric&appid=54880c125693096ed43dc2fd0f5ceba4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=+boca raton&units=metric&appid=54880c125693096ed43dc2fd0f5ceba4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "+boca raton"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "appid",
+							"value": "54880c125693096ed43dc2fd0f5ceba4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather https://api.openweathermap.org/data/2.5/weather?q=+boca raton&units=metric&appid=54880c125693096ed43dc2fd0f5ceba4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=+boca raton&units=metric&appid=800a3f8dc7a089347269a3957e059ee1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "+boca raton"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "appid",
+							"value": "800a3f8dc7a089347269a3957e059ee1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET by lat lng https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=800a3f8dc7a089347269a3957e059ee1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=800a3f8dc7a089347269a3957e059ee1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "44.34"
+						},
+						{
+							"key": "lon",
+							"value": "10.99"
+						},
+						{
+							"key": "appid",
+							"value": "800a3f8dc7a089347269a3957e059ee1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Lat Lng | https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyC8kOfwLoyySLxxj0FJ3hHpS7JAaKuKpeM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?lat=37.4223414&lon=-122.0843968&appid=800a3f8dc7a089347269a3957e059ee1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37.4223414"
+						},
+						{
+							"key": "lon",
+							"value": "-122.0843968"
+						},
+						{
+							"key": "appid",
+							"value": "800a3f8dc7a089347269a3957e059ee1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
